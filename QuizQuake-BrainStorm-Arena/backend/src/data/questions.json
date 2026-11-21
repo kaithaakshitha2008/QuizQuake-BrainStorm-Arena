@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "topic": "Data Structures",
+    "subtopic": "Arrays",
+    "difficulty": "Easy",
+    "question": "What is the time complexity to access an element at a given index in a standard contiguous array?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "correctAnswer": 0,
+    "explanation": "Arrays provide direct memory addressing using base address + index * element_size, allowing constant time O(1) random access."
+  },
+  {
+    "id": 2,
+    "topic": "Data Structures",
+    "subtopic": "Linked Lists",
+    "difficulty": "Easy",
+    "question": "Which pointer operation is required to delete a node 'temp' following node 'prev' in a singly linked list?",
+    "options": ["prev->next = temp->next", "temp->next = prev", "prev = temp->next", "temp = null"],
+    "correctAnswer": 0,
+    "explanation": "Bypassing the node to be deleted by setting prev->next to temp->next detaches 'temp' from the singly linked list."
+  },
+  {
+    "id": 3,
+    "topic": "Data Structures",
+    "subtopic": "Stacks",
+    "difficulty": "Easy",
+    "question": "Which principle does a Stack data structure follow for insertion and removal of elements?",
+    "options": ["FIFO (First In First Out)", "LIFO (Last In First Out)", "Random Access", "Priority Order"],
+    "correctAnswer": 1,
+    "explanation": "A Stack follows Last In First Out (LIFO), meaning the most recently added item is the first one removed."
+  },
+  {
+    "id": 4,
+    "topic": "Data Structures",
+    "subtopic": "Queues",
+    "difficulty": "Easy",
+    "question": "In a standard First-In-First-Out (FIFO) linear queue, where do enqueue and dequeue operations occur?",
+    "options": ["Enqueue at Rear, Dequeue at Front", "Enqueue at Front, Dequeue at Rear", "Both at Front", "Both at Rear"],
+    "correctAnswer": 0,
+    "explanation": "In a queue, new elements are inserted at the rear (tail) and removed from the front (head)."
+  },
+  {
+    "id": 5,
+    "topic": "Data Structures",
+    "subtopic": "Trees",
+    "difficulty": "Easy",
+    "question": "What is the maximum number of children a node can have in a Binary Tree?",
+    "options": ["1", "2", "3", "Unlimited"],
+    "correctAnswer": 1,
+    "explanation": "By definition, each node in a binary tree has at most two children: typically referred to as the left child and right child."
+  },
+  {
+    "id": 6,
+    "topic": "Data Structures",
+    "subtopic": "Arrays",
+    "difficulty": "Medium",
+    "question": "What is the worst-case time complexity of inserting an element into a dynamic array (like std::vector or ArrayList) when resizing occurs?",
+    "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+    "correctAnswer": 2,
+    "explanation": "When the dynamic array reaches capacity, a new block of double memory is allocated and all n elements must be copied over, taking O(n) worst-case time (though amortized insertion is O(1))."
+  },
+  {
+    "id": 7,
+    "topic": "Data Structures",
+    "subtopic": "Linked Lists",
+    "difficulty": "Medium",
+    "question": "Floyd's Cycle-Finding Algorithm (Tortoise and Hare) detects a cycle in a linked list using two pointers moving at what speeds?",
+    "options": ["Slow pointer 1 step, Fast pointer 2 steps", "Slow pointer 1 step, Fast pointer 3 steps", "Both pointers 2 steps", "Slow pointer 2 steps, Fast pointer 1 step"],
+    "correctAnswer": 0,
+    "explanation": "The slow pointer advances 1 step at a time while the fast pointer advances 2 steps. If a cycle exists, the fast pointer will eventually lap and meet the slow pointer within O(n) steps."
+  },
+  {
+    "id": 8,
+    "topic": "Data Structures",
+    "subtopic": "Trees",
+    "difficulty": "Medium",
+    "question": "In an AVL tree, what is the maximum permissible difference between the heights of the left and right subtrees of any node?",
+    "options": ["0", "1", "2", "log(n)"],
+    "correctAnswer": 1,
+    "explanation": "An AVL tree is a self-balancing binary search tree where the balance factor (height(left) - height(right)) for every node must be -1, 0, or 1."
+  },
+  {
+    "id": 9,
+    "topic": "Data Structures",
+    "subtopic": "Stacks",
+    "difficulty": "Medium",
+    "question": "Which data structure is primarily utilized to convert an Infix arithmetic expression into a Postfix (Reverse Polish) expression?",
+    "options": ["Queue", "Stack", "Binary Heap", "Hash Table"],
+    "correctAnswer": 1,
+    "explanation": "Shunting-Yard algorithm uses an operator stack to track precedence and associativity when transforming infix expressions into postfix notation."
+  },
+  {
+    "id": 10,
+    "topic": "Data Structures",
+    "subtopic": "Queues",
+    "difficulty": "Medium",
+    "question": "In a circular queue implemented using an array of size N, what formula identifies the condition where the queue is full (leaving one slot empty to differentiate from empty)?",
+    "options": ["(rear + 1) % N == front", "rear == front", "(front + 1) % N == rear", "rear == N - 1"],
+    "correctAnswer": 0,
+    "explanation": "The standard full condition in a circular queue is (rear + 1) % N == front, which prevents ambiguous state with the empty condition (front == rear)."
+  },
+  {
+    "id": 11,
+    "topic": "Data Structures",
+    "subtopic": "Trees",
+    "difficulty": "Hard",
+    "question": "What is the maximum number of rotations required to restore the AVL property after inserting a single node into an AVL tree?",
+    "options": ["1 single or 1 double rotation (at most 2 rotations)", "O(log n) rotations", "O(n) rotations", "3 double rotations"],
+    "correctAnswer": 0,
+    "explanation": "After an insertion in an AVL tree, rebalancing requires at most one single rotation (LL/RR) or one double rotation (LR/RL) at the lowest unbalanced ancestor."
+  },
+  {
+    "id": 12,
+    "topic": "Data Structures",
+    "subtopic": "Trees",
+    "difficulty": "Hard",
+    "question": "In a Red-Black Tree, which of the following is an invariant property that guarantees O(log n) search height?",
+    "options": ["Every path from a node to descendant leaves contains the same number of black nodes", "Red nodes must only have red children", "The root must be colored red", "All leaves must be red"],
+    "correctAnswer": 0,
+    "explanation": "Property 5 of Red-Black trees asserts black-height consistency: all simple paths from any node to its descendant null leaves contain identical numbers of black nodes."
+  },
+  {
+    "id": 13,
+    "topic": "Data Structures",
+    "subtopic": "Arrays",
+    "difficulty": "Hard",
+    "question": "What is the optimal auxiliary space complexity of Kadane's Algorithm for the Maximum Subarray Problem?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "correctAnswer": 0,
+    "explanation": "Kadane's algorithm computes the maximum subarray sum in O(n) time while only tracking max_so_far and current_max variables, requiring O(1) auxiliary space."
+  },
+  {
+    "id": 14,
+    "topic": "Data Structures",
+    "subtopic": "Linked Lists",
+    "difficulty": "Hard",
+    "question": "In an unrolled linked list storing an array of B elements in each node, what is the time complexity to find the k-th overall element if nodes maintain subtree counts?",
+    "options": ["O(log(N/B)) or O(N/B)", "O(N)", "O(1)", "O(N * B)"],
+    "correctAnswer": 0,
+    "explanation": "Traversing the linked nodes takes O(N/B) where N is total items and B is block capacity, drastically reducing pointer jumping and cache misses compared to traditional nodes."
+  },
+  {
+    "id": 15,
+    "topic": "Data Structures",
+    "subtopic": "Queues",
+    "difficulty": "Hard",
+    "question": "How can a monotonic queue achieve amortized O(1) time per window slide when solving the Sliding Window Maximum problem?",
+    "options": ["By removing smaller elements from the back before inserting the new element", "By sorting the queue on each step", "By using a min-heap with lazy deletion", "By maintaining two circular buffers"],
+    "correctAnswer": 0,
+    "explanation": "A monotonic deque maintains elements in descending order; each element enters and exits the deque at most once across the entire array, yielding amortized O(1) operations per window step."
+  },
+  {
+    "id": 16,
+    "topic": "Algorithms",
+    "subtopic": "Searching",
+    "difficulty": "Easy",
+    "question": "What prerequisite must be satisfied before Binary Search can be executed on an array?",
+    "options": ["The elements must be sorted", "All numbers must be positive integers", "Array size must be a power of two", "The array must not contain duplicates"],
+    "correctAnswer": 0,
+    "explanation": "Binary search relies on monotonicity (sorted order) to eliminate half of the remaining search space on each comparison."
+  },
+  {
+    "id": 17,
+    "topic": "Algorithms",
+    "subtopic": "Sorting",
+    "difficulty": "Easy",
+    "question": "Which comparison sorting algorithm has an optimal best-case time complexity of O(n) on an already sorted array?",
+    "options": ["Bubble Sort (with swapped flag)", "Selection Sort", "Merge Sort", "Heap Sort"],
+    "correctAnswer": 0,
+    "explanation": "With an early exit check (tracking if any swap occurred during a pass), Bubble Sort or Insertion Sort runs in O(n) time on already sorted arrays."
+  },
+  {
+    "id": 18,
+    "topic": "Algorithms",
+    "subtopic": "Recursion",
+    "difficulty": "Easy",
+    "question": "What crucial component must every valid recursive algorithm possess to prevent infinite recursion and stack overflow?",
+    "options": ["Base case", "Dynamic array", "Global counter", "Loop termination flag"],
+    "correctAnswer": 0,
+    "explanation": "A base case provides the termination condition where the function returns a value without making further recursive calls."
+  },
+  {
+    "id": 19,
+    "topic": "Algorithms",
+    "subtopic": "Dynamic Programming",
+    "difficulty": "Easy",
+    "question": "What two key properties make a problem suitable for Dynamic Programming?",
+    "options": ["Overlapping subproblems and optimal substructure", "Greedy choice and greedy termination", "Divide and conquer with independent subproblems", "Randomized pivot and balance"],
+    "correctAnswer": 0,
+    "explanation": "Dynamic Programming applies to problems with optimal substructure (optimal solution composed of optimal subsolutions) and overlapping subproblems (re-encountered subproblems)."
+  },
+  {
+    "id": 20,
+    "topic": "Algorithms",
+    "subtopic": "Sorting",
+    "difficulty": "Easy",
+    "question": "Which algorithmic design paradigm does Merge Sort utilize?",
+    "options": ["Divide and Conquer", "Greedy approach", "Dynamic Programming", "Backtracking"],
+    "correctAnswer": 0,
+    "explanation": "Merge sort divides the array into halves recursively, sorts them, and then conquers by merging the sorted halves."
+  },
+  {
+    "id": 21,
+    "topic": "Algorithms",
+    "subtopic": "Sorting",
+    "difficulty": "Medium",
+    "question": "What is the worst-case time complexity of QuickSort when bad pivots (e.g., smallest/largest element) are repeatedly chosen?",
+    "options": ["O(n^2)", "O(n log n)", "O(n)", "O(log n)"],
+    "correctAnswer": 0,
+    "explanation": "When pivots divide the array into subproblems of size 0 and n - 1 at every step, QuickSort degrades to O(n^2) time complexity."
+  },
+  {
+    "id": 22,
+    "topic": "Algorithms",
+    "subtopic": "Dynamic Programming",
+    "difficulty": "Medium",
+    "question": "In the standard 0/1 Knapsack problem with N items and maximum weight capacity W, what is the time complexity of the dynamic programming solution?",
+    "options": ["O(N * W)", "O(2^N)", "O(N log W)", "O(W^2)"],
+    "correctAnswer": 0,
+    "explanation": "The DP table requires computing states for N items against capacities from 0 to W, yielding pseudo-polynomial time complexity O(N * W)."
+  },
+  {
+    "id": 23,
+    "topic": "Algorithms",
+    "subtopic": "Searching",
+    "difficulty": "Medium",
+    "question": "In a sorted array with uniform distribution of numerical keys, which search algorithm achieves an average time complexity of O(log log n)?",
+    "options": ["Interpolation Search", "Binary Search", "Exponential Search", "Ternary Search"],
+    "correctAnswer": 0,
+    "explanation": "Interpolation Search estimates the probe position based on key value distribution: probe = low + ((target - arr[low]) * (high - low)) / (arr[high] - arr[low]), achieving O(log log n) on uniform data."
+  },
+  {
+    "id": 24,
+    "topic": "Algorithms",
+    "subtopic": "Recursion",
+    "difficulty": "Medium",
+    "question": "According to the Master Theorem for divide-and-conquer recurrences T(n) = a*T(n/b) + f(n), what is the time complexity if f(n) = Theta(n^(log_b(a)))?",
+    "options": ["Theta(n^(log_b(a)) * log n)", "Theta(n^2)", "Theta(log n)", "Theta(n^(log_b(a)))"],
+    "correctAnswer": 0,
+    "explanation": "Case 2 of the Master Theorem states that when f(n) matches n^(log_b a), the total work across all tree levels is balanced, resulting in Theta(n^(log_b a) * log n)."
+  },
+  {
+    "id": 25,
+    "topic": "Algorithms",
+    "subtopic": "Sorting",
+    "difficulty": "Medium",
+    "question": "Which of the following sorting algorithms is guaranteed to be both stable and achieve O(n log n) worst-case time complexity?",
+    "options": ["Merge Sort", "QuickSort", "Heap Sort", "Selection Sort"],
+    "correctAnswer": 0,
+    "explanation": "Merge sort guarantees O(n log n) worst-case time and preserves the relative order of duplicate elements (stable). Standard QuickSort and HeapSort are unstable."
+  },
+  {
+    "id": 26,
+    "topic": "Algorithms",
+    "subtopic": "Dynamic Programming",
+    "difficulty": "Hard",
+    "question": "In the Longest Increasing Subsequence (LIS) problem, how can the time complexity be optimized from O(n^2) to O(n log n)?",
+    "options": ["Using patience sorting with binary search on the tails array", "Using memoized DFS", "Using Matrix Exponentiation", "Using a segment tree of differences"],
+    "correctAnswer": 0,
+    "explanation": "Maintaining an array of smallest tail values for increasing subsequences of various lengths allows binary search insertion (std::lower_bound), reducing LIS to O(n log n)."
+  },
+  {
+    "id": 27,
+    "topic": "Algorithms",
+    "subtopic": "Dynamic Programming",
+    "difficulty": "Hard",
+    "question": "What technique reduces the 1D DP recurrence DP[i] = min_{j < i} (DP[j] + (x_i - x_j)^2) from O(n^2) to O(n) when slopes are monotonic?",
+    "options": ["Convex Hull Trick (CHT)", "Fast Fourier Transform", "Tarjan's Off-line Algorithm", "Mo's Algorithm"],
+    "correctAnswer": 0,
+    "explanation": "The Convex Hull Trick maintains the lower envelope of linear equations in a deque, enabling O(1) amortized queries per transition."
+  },
+  {
+    "id": 28,
+    "topic": "Algorithms",
+    "subtopic": "Searching",
+    "difficulty": "Hard",
+    "question": "When searching for a pattern in text, which algorithm computes a Longest Prefix Suffix (LPS) array to achieve O(N + M) worst-case time without backtracking?",
+    "options": ["Knuth-Morris-Pratt (KMP) Algorithm", "Rabin-Karp Algorithm", "Boyer-Moore Bad Character rule only", "Brute Force matcher"],
+    "correctAnswer": 0,
+    "explanation": "KMP precomputes the LPS pi-array in O(M) time, allowing the text pointer to advance monotonically without ever regressing, guaranteeing O(N + M) total time."
+  },
+  {
+    "id": 29,
+    "topic": "Algorithms",
+    "subtopic": "Sorting",
+    "difficulty": "Hard",
+    "question": "What is the theoretical lower bound on comparisons for any comparison-based sorting algorithm on n arbitrary elements?",
+    "options": ["Omega(n log n)", "Omega(n)", "Omega(log n)", "Omega(n^2)"],
+    "correctAnswer": 0,
+    "explanation": "A comparison tree must distinguish between n! permutations. The height of a binary decision tree with n! leaves is ceil(log2(n!)) = Omega(n log n) by Stirling's approximation."
+  },
+  {
+    "id": 30,
+    "topic": "Algorithms",
+    "subtopic": "Recursion",
+    "difficulty": "Hard",
+    "question": "How does tail-call optimization (TCO) prevent call-stack overflow in deep recursion?",
+    "options": ["The compiler reuses the caller's stack frame if the recursive call is the final expression", "It transfers stack execution to the heap", "It executes calls in asynchronous background threads", "It duplicates arguments in registers"],
+    "correctAnswer": 0,
+    "explanation": "When a function returns the direct result of another call as its last action (tail position), the compiler overwrites the current stack frame with a jump instruction, consuming O(1) stack space."
+  },
+  {
+    "id": 31,
+    "topic": "Operating Systems",
+    "subtopic": "Processes",
+    "difficulty": "Easy",
+    "question": "What is the primary difference between a process and a thread?",
+    "options": ["Threads in the same process share the same address space, whereas processes have independent address spaces", "Processes share stack memory, threads do not", "Threads cannot execute concurrently", "A process cannot own more than one thread"],
+    "correctAnswer": 0,
+    "explanation": "Processes are independent execution units with isolated memory and file descriptors. Threads exist within a process and share code, data, and heap, but retain individual program counters and stacks."
+  },
+  {
+    "id": 32,
+    "topic": "Operating Systems",
+    "subtopic": "Scheduling",
+    "difficulty": "Easy",
+    "question": "Which CPU scheduling algorithm gives each process a small fixed unit of CPU time known as a time quantum?",
+    "options": ["Round Robin (RR)", "First-Come First-Served (FCFS)", "Shortest Job First (SJF)", "Priority Scheduling"],
+    "correctAnswer": 0,
+    "explanation": "Round Robin assigns a cyclic time slice (quantum) to each runnable process to guarantee interactive responsiveness."
+  },
+  {
+    "id": 33,
+    "topic": "Operating Systems",
+    "subtopic": "Deadlocks",
+    "difficulty": "Easy",
+    "question": "Which of the following is NOT one of the four Coffman conditions necessary for a deadlock to occur?",
+    "options": ["Preemption allowed by default", "Mutual Exclusion", "Hold and Wait", "Circular Wait"],
+    "correctAnswer": 0,
+    "explanation": "The Coffman conditions are: Mutual Exclusion, Hold and Wait, No Preemption, and Circular Wait. If preemption is allowed, deadlock cannot persist."
+  },
+  {
+    "id": 34,
+    "topic": "Operating Systems",
+    "subtopic": "Memory Management",
+    "difficulty": "Easy",
+    "question": "What is the primary purpose of Paging in an operating system?",
+    "options": ["To allow the physical address space of a process to be non-contiguous", "To encrypt user data on disk", "To balance network packet throughput", "To speed up compiler lexical analysis"],
+    "correctAnswer": 0,
+    "explanation": "Paging divides logical memory into fixed-size pages and physical memory into page frames, eliminating external fragmentation and allowing non-contiguous allocation."
+  },
+  {
+    "id": 35,
+    "topic": "Operating Systems",
+    "subtopic": "Processes",
+    "difficulty": "Easy",
+    "question": "In Unix-like systems, what does the fork() system call return to the newly created child process upon success?",
+    "options": ["0", "The PID of the parent process", "1", "A negative integer"],
+    "correctAnswer": 0,
+    "explanation": "Upon successful creation, fork() returns 0 to the child process and the child's new PID to the parent process."
+  },
+  {
+    "id": 36,
+    "topic": "Operating Systems",
+    "subtopic": "Deadlocks",
+    "difficulty": "Medium",
+    "question": "Which algorithm is commonly used for deadlock avoidance in a system with multiple resource instances?",
+    "options": ["Banker's Algorithm", "Dijkstra's Shortest Path", "SSTF Disk Algorithm", "Peterson's Algorithm"],
+    "correctAnswer": 0,
+    "explanation": "Banker's Algorithm tests for safety by simulating the allocation of maximum possible resources, verifying that a safe sequence exists before approving allocation."
+  },
+  {
+    "id": 37,
+    "topic": "Operating Systems",
+    "subtopic": "Scheduling",
+    "difficulty": "Medium",
+    "question": "What phenomenon occurs in First-Come-First-Served (FCFS) scheduling where a long CPU-bound process causes shorter I/O-bound processes to wait excessively?",
+    "options": ["Convoy Effect", "Starvation", "Priority Inversion", "Belady's Anomaly"],
+    "correctAnswer": 0,
+    "explanation": "The Convoy Effect occurs when a CPU-intensive process occupies the CPU, causing all subsequent short or I/O-bound jobs to stack up behind it in the ready queue."
+  },
+  {
+    "id": 38,
+    "topic": "Operating Systems",
+    "subtopic": "Memory Management",
+    "difficulty": "Medium",
+    "question": "What is Belady's Anomaly in virtual memory management?",
+    "options": ["Increasing the number of page frames results in an increase in page faults", "Decreasing cache size increases hit ratio", "Virtual memory exceeds disk swap partition", "TLB misses trigger kernel panics"],
+    "correctAnswer": 0,
+    "explanation": "Belady's Anomaly is a counter-intuitive phenomenon observed in FIFO page replacement where granting more physical frames to a process can lead to more total page faults."
+  },
+  {
+    "id": 39,
+    "topic": "Operating Systems",
+    "subtopic": "Processes",
+    "difficulty": "Medium",
+    "question": "What is a 'Zombie' process in a Unix-like operating system?",
+    "options": ["A process that has terminated, but whose exit status has not yet been read by its parent via wait()", "A background daemon running without a controlling terminal", "A process blocked indefinitely waiting on a dead socket", "A malicious thread consuming 100% CPU"],
+    "correctAnswer": 0,
+    "explanation": "When a child process terminates, its entry remains in the process table to preserve its exit code until the parent calls wait() or waitpid()."
+  },
+  {
+    "id": 40,
+    "topic": "Operating Systems",
+    "subtopic": "Scheduling",
+    "difficulty": "Medium",
+    "question": "How does Priority Inversion get resolved in real-time operating systems?",
+    "options": ["Priority Inheritance Protocol", "Increasing time quantum in round robin", "Converting preemptive threads to cooperative", "Aborting the low-priority thread"],
+    "correctAnswer": 0,
+    "explanation": "Priority Inheritance boosts the priority of a low-priority thread holding a lock needed by a high-priority thread to match the high-priority thread until it releases the lock."
+  },
+  {
+    "id": 41,
+    "topic": "Operating Systems",
+    "subtopic": "Deadlocks",
+    "difficulty": "Hard",
+    "question": "In Banker's Algorithm, a system state is formally defined as 'Safe' if and only if:",
+    "options": ["There exists at least one order (safe sequence) in which all processes can finish their execution without deadlock", "All resource allocations are currently zero", "Available resources exceed the sum of all maximum claims", "No processes are currently in the waiting state"],
+    "correctAnswer": 0,
+    "explanation": "A state is safe if the OS can guarantee that all processes can eventually claim their maximum declared resources and terminate successfully in some sequence."
+  },
+  {
+    "id": 42,
+    "topic": "Operating Systems",
+    "subtopic": "Memory Management",
+    "difficulty": "Hard",
+    "question": "In multi-level paging on a 64-bit architecture, what hardware cache drastically accelerates virtual-to-physical address translation by bypassing page table walks in RAM?",
+    "options": ["Translation Lookaside Buffer (TLB)", "Instruction Pre-fetch Cache", "Write-Back Buffer", "Memory Management Unit (MMU) ROM"],
+    "correctAnswer": 0,
+    "explanation": "The TLB is an associative hardware cache inside the CPU that stores recent virtual-to-physical page mappings, avoiding multi-level page table traversals in main memory."
+  },
+  {
+    "id": 43,
+    "topic": "Operating Systems",
+    "subtopic": "Memory Management",
+    "difficulty": "Hard",
+    "question": "What is 'Thrashing' in an operating system, and what condition causes it?",
+    "options": ["Excessive page swapping activity when the sum of working sets across active processes exceeds physical memory", "Disk read errors causing file corruption", "Repeated context switches due to a tiny round robin quantum", "Deadlocks triggered between memory allocators"],
+    "correctAnswer": 0,
+    "explanation": "Thrashing occurs when processes lack sufficient frames to hold their active working sets. The OS spends nearly all its time servicing page faults rather than executing instructions."
+  },
+  {
+    "id": 44,
+    "topic": "Operating Systems",
+    "subtopic": "Processes",
+    "difficulty": "Hard",
+    "question": "Which hardware atomic instruction is fundamentally used to implement software synchronization primitives like spinlocks and mutexes?",
+    "options": ["Compare-And-Swap (CAS) or Test-And-Set", "DMA Transfer Request", "Interrupt Enable/Disable", "Shift Logical Right (SHR)"],
+    "correctAnswer": 0,
+    "explanation": "Hardware atomic operations such as Compare-And-Swap (CAS) allow a CPU to read, modify, and write a memory word as an indivisible operation across all CPU cores."
+  },
+  {
+    "id": 45,
+    "topic": "Operating Systems",
+    "subtopic": "Scheduling",
+    "difficulty": "Hard",
+    "question": "In Linux's Completely Fair Scheduler (CFS), which data structure is used to track and pick the task with the lowest virtual runtime (vruntime)?",
+    "options": ["Red-Black Tree", "Binomial Heap", "Circular Doubly-Linked List", "Bitmask Priority Matrix"],
+    "correctAnswer": 0,
+    "explanation": "Linux CFS tracks runnable tasks in a time-ordered Red-Black tree keyed by vruntime. The leftmost node always contains the task that has received the least CPU time."
+  },
+  {
+    "id": 46,
+    "topic": "Computer Networks",
+    "subtopic": "OSI Model",
+    "difficulty": "Easy",
+    "question": "Which layer of the 7-layer OSI Model is responsible for end-to-end communication, segmentation, and flow control (e.g., TCP, UDP)?",
+    "options": ["Transport Layer (Layer 4)", "Network Layer (Layer 3)", "Data Link Layer (Layer 2)", "Session Layer (Layer 5)"],
+    "correctAnswer": 0,
+    "explanation": "The Transport Layer (Layer 4) provides transparent transfer of data between end users, segmenting packets and managing flow and error control."
+  },
+  {
+    "id": 47,
+    "topic": "Computer Networks",
+    "subtopic": "TCP/IP",
+    "difficulty": "Easy",
+    "question": "What sequence of packets establishes a reliable connection in the standard TCP 3-Way Handshake?",
+    "options": ["SYN -> SYN-ACK -> ACK", "ACK -> SYN -> SYN-ACK", "SYN -> ACK -> DATA", "FIN -> ACK -> FIN-ACK"],
+    "correctAnswer": 0,
+    "explanation": "The client sends a SYN packet, the server responds with SYN-ACK, and the client completes the handshake with an ACK."
+  },
+  {
+    "id": 48,
+    "topic": "Computer Networks",
+    "subtopic": "DNS",
+    "difficulty": "Easy",
+    "question": "What is the standard port number utilized by the Domain Name System (DNS) for query resolution?",
+    "options": ["53", "80", "443", "22"],
+    "correctAnswer": 0,
+    "explanation": "DNS operates primarily over UDP (and TCP for zone transfers or large responses) on well-known port 53."
+  },
+  {
+    "id": 49,
+    "topic": "Computer Networks",
+    "subtopic": "Routing",
+    "difficulty": "Easy",
+    "question": "What protocol is used to map an Internet Protocol (IP) address to a physical MAC address on a local area network?",
+    "options": ["ARP (Address Resolution Protocol)", "DHCP", "ICMP", "NAT"],
+    "correctAnswer": 0,
+    "explanation": "Address Resolution Protocol (ARP) translates Layer 3 IP addresses into Layer 2 hardware MAC addresses within a broadcast domain."
+  },
+  {
+    "id": 50,
+    "topic": "Computer Networks",
+    "subtopic": "TCP/IP",
+    "difficulty": "Easy",
+    "question": "What is the primary difference between TCP and UDP at the transport layer?",
+    "options": ["TCP is connection-oriented and reliable, whereas UDP is connectionless and best-effort", "UDP has retransmission guarantees, TCP does not", "TCP can only transmit text, UDP transmits binary", "UDP is slower than TCP"],
+    "correctAnswer": 0,
+    "explanation": "TCP ensures ordered, acknowledged delivery with congestion control, while UDP prioritizes speed and low latency without handshake or retransmissions."
+  },
+  {
+    "id": 51,
+    "topic": "Computer Networks",
+    "subtopic": "Routing",
+    "difficulty": "Medium",
+    "question": "Which routing algorithm is utilized by the Open Shortest Path First (OSPF) interior gateway protocol?",
+    "options": ["Dijkstra's Link-State Algorithm", "Bellman-Ford Distance Vector", "Floyd-Warshall All-Pairs", "Path Vector BGP"],
+    "correctAnswer": 0,
+    "explanation": "OSPF is a link-state routing protocol where each router calculates shortest paths across the network topology using Dijkstra's algorithm."
+  },
+  {
+    "id": 52,
+    "topic": "Computer Networks",
+    "subtopic": "TCP/IP",
+    "difficulty": "Medium",
+    "question": "During TCP congestion control, what happens to the Congestion Window (cwnd) when a packet loss is detected via a timeout in TCP Tahoe?",
+    "options": ["cwnd is reset to 1 Maximum Segment Size (MSS) and slow start restarts", "cwnd is halved (Multiplicative Decrease)", "cwnd remains unchanged", "cwnd doubles"],
+    "correctAnswer": 0,
+    "explanation": "Upon a timeout, classic TCP Tahoe drops cwnd back to 1 MSS, sets the slow-start threshold (ssthresh) to half the previous cwnd, and re-enters the slow start phase."
+  },
+  {
+    "id": 53,
+    "topic": "Computer Networks",
+    "subtopic": "DNS",
+    "difficulty": "Medium",
+    "question": "Which DNS record type maps a domain name directly to an IPv6 128-bit address?",
+    "options": ["AAAA record", "A record", "CNAME record", "MX record"],
+    "correctAnswer": 0,
+    "explanation": "An 'A' record maps to a 32-bit IPv4 address, whereas an 'AAAA' (quad-A) record maps to a 128-bit IPv6 address."
+  },
+  {
+    "id": 54,
+    "topic": "Computer Networks",
+    "subtopic": "OSI Model",
+    "difficulty": "Medium",
+    "question": "At which layer of the OSI model does a standard network switch operate to inspect MAC addresses and forward frames?",
+    "options": ["Data Link Layer (Layer 2)", "Physical Layer (Layer 1)", "Network Layer (Layer 3)", "Application Layer (Layer 7)"],
+    "correctAnswer": 0,
+    "explanation": "Traditional network switches operate at Layer 2 (Data Link), reading ethernet frame headers and maintaining a MAC address learning table."
+  },
+  {
+    "id": 55,
+    "topic": "Computer Networks",
+    "subtopic": "Routing",
+    "difficulty": "Medium",
+    "question": "What is the primary exterior routing protocol that connects autonomous systems (AS) across the global Internet?",
+    "options": ["BGP (Border Gateway Protocol)", "RIP", "OSPF", "IS-IS"],
+    "correctAnswer": 0,
+    "explanation": "Border Gateway Protocol (BGP) is the standardized path-vector protocol used to exchange routing and reachability information among autonomous systems on the Internet."
+  },
+  {
+    "id": 56,
+    "topic": "Computer Networks",
+    "subtopic": "TCP/IP",
+    "difficulty": "Hard",
+    "question": "What is the purpose of the TIME_WAIT state in the TCP connection teardown finite state machine?",
+    "options": ["To ensure late duplicate segments expire and ensure the final ACK was received by the peer", "To wait for new incoming HTTP requests", "To flush DNS cache buffers", "To negotiate new window sizes"],
+    "correctAnswer": 0,
+    "explanation": "TIME_WAIT (lasting 2 * MSL, Maximum Segment Lifetime) guarantees that any delayed duplicate packets on the Internet dissipate and confirms the active closer's ACK reached the passive closer."
+  },
+  {
+    "id": 57,
+    "topic": "Computer Networks",
+    "subtopic": "Routing",
+    "difficulty": "Hard",
+    "question": "What mechanism does Distance Vector Routing (like RIP) use to prevent the 'Count to Infinity' problem?",
+    "options": ["Split Horizon and Poison Reverse", "Dijkstra's shortest path computation", "Flooding link-state advertisements", "Setting TTL to 255"],
+    "correctAnswer": 0,
+    "explanation": "Split Horizon prohibits advertising a route back out the same interface it was learned from, and Poison Reverse explicitly advertises an unreachable metric (infinity) back to that neighbor."
+  },
+  {
+    "id": 58,
+    "topic": "Computer Networks",
+    "subtopic": "DNS",
+    "difficulty": "Hard",
+    "question": "What security vulnerability does DNSSEC protect against using cryptographic digital signatures on DNS records?",
+    "options": ["DNS Cache Poisoning / Spoofing", "DDoS amplification attacks", "SYN flooding", "Buffer overflows in BIND"],
+    "correctAnswer": 0,
+    "explanation": "DNSSEC introduces cryptographic public-key signatures (RRSIG, DNSKEY) to guarantee the origin authenticity and integrity of DNS responses, thwarting cache poisoning."
+  },
+  {
+    "id": 59,
+    "topic": "Computer Networks",
+    "subtopic": "TCP/IP",
+    "difficulty": "Hard",
+    "question": "How does the Nagle Algorithm optimize TCP network throughput, and what TCP socket flag disables it for latency-critical applications?",
+    "options": ["It coalesces small outgoing packets until an ACK arrives; disabled via TCP_NODELAY", "It increases window size dynamically; disabled via SO_KEEPALIVE", "It bypasses checksumming; disabled via TCP_FASTOPEN", "It compresses TCP headers; disabled via SO_REUSEADDR"],
+    "correctAnswer": 0,
+    "explanation": "Nagle's algorithm reduces small-packet overhead by buffering tiny outgoing segments until a full MSS is gathered or prior ACK returns. Setting TCP_NODELAY disables it for real-time traffic."
+  },
+  {
+    "id": 60,
+    "topic": "Computer Networks",
+    "subtopic": "OSI Model",
+    "difficulty": "Hard",
+    "question": "In the TLS 1.3 cryptographic handshake, what key exchange protocol replaced RSA key transport to guarantee Forward Secrecy?",
+    "options": ["Ephemeral Diffie-Hellman (ECDHE / DHE)", "Static RSA Key Exchange", "MD5 Hash Chaining", "DES Triple Ciphering"],
+    "correctAnswer": 0,
+    "explanation": "TLS 1.3 deprecated static RSA key exchange in favor of Ephemeral Diffie-Hellman (ECDHE), ensuring that compromise of long-term server private keys cannot decrypt previously recorded sessions."
+  }
+]

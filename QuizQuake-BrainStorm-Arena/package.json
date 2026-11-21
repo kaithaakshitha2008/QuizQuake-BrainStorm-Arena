@@ -1,0 +1,23 @@
+{
+  "name": "quizquake-brainstorm-arena",
+  "version": "1.0.0",
+  "description": "QuizQuake: BrainStorm Arena - Adaptive Learning and Assessment Platform",
+  "scripts": {
+    "start": "npm --prefix backend run start",
+    "install:all": "npm --prefix backend install && npm --prefix frontend install",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build": "npm --prefix backend run build && npm --prefix frontend run build"
+  },
+  "keywords": [
+    "adaptive-learning",
+    "quiz",
+    "hackathon",
+    "react",
+    "typescript",
+    "sqlite",
+    "chartjs"
+  ],
+  "author": "",
+  "license": "ISC"
+}
